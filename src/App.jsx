@@ -1,6 +1,6 @@
 // src/App.jsx
 
-import { useState, useContext } from 'react';
+import { useState, useContext, createContext } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 
 import NavBar from './components/NavBar/NavBar';
@@ -10,7 +10,9 @@ import SignupForm from './components/SignupForm/SignupForm';
 import SigninForm from './components/SigninForm/SigninForm';
 
 import * as authService from '../src/services/authService'; 
-import { UserProvider, UserContext } from './Contexts/UserContext';
+
+import { UserProvider } from './Contexts/UserContext';
+
 
 const App = () => {
   const [user, setUser] = useState(authService.getUser());

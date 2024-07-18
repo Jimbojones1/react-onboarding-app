@@ -1,7 +1,6 @@
 // src/components/Dashboard/Dashboard.jsx
 
-import { UserContext, useLoggedUser } from '../../Contexts/UserContext';
-import { useContext } from 'react';
+import { useLoggedUser } from "../../Contexts/UserContext";
 
 const Dashboard = () => {
   const loggedUser = useLoggedUser();
